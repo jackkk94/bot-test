@@ -1,6 +1,7 @@
+require('@dotenvx/dotenvx').config();
 const { Telegraf, Markup, session } = require("telegraf");
-
-const bot = new Telegraf("7463729826:AAEcii_PWqDdBSVPEHeudWEEAXAQvojGLkA");
+const token = process.env.BOT_TOKEN;
+const bot = new Telegraf(token);
 bot.use(session());
 bot.telegram.setMyCommands([
 
